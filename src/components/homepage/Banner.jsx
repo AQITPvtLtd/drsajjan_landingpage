@@ -18,7 +18,7 @@ const Banner = () => {
                 </div>
 
                 {/* Grid container */}
-                <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-2 gap-4 px-6 py-10">
+                <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-2 gap-4 px-6">
                     {/* Left section - Text content */}
                     <div className="text-start bg-opacity-50 flex flex-col justify-center md:ml-20">
                         <div>
