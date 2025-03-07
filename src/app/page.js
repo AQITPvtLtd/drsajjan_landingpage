@@ -1,8 +1,11 @@
 import Banner from "@/components/homepage/Banner";
 import Comprehensive from "@/components/homepage/Comprehensive";
 import Form from "@/components/homepage/Form";
+import Gallery from "@/components/homepage/Gallery";
+// import Gallery from "@/components/homepage/Gallery";
 import Services from "@/components/homepage/Services";
 import Whychoose from "@/components/homepage/Whychoose";
+import Youtube from "@/components/homepage/Youtube";
 
 export default function Home() {
   return (
@@ -14,6 +17,9 @@ export default function Home() {
       <Whychoose />
       <Services />
       <Comprehensive />
+      {/* <Gallery /> */}
+      <Gallery />
+      <Youtube />
     </div>
   );
 }

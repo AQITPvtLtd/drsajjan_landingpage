@@ -23,10 +23,13 @@ const Header = () => {
                 </Link>
 
                 {/* Desktop Navigation */}
-                <div className="hidden md:flex gap-6 items-center">
+                <div className="hidden md:flex">
                     <Link href="mailto:info@ssbhealthcare.com" className="font-semibold text-lg hover:text-blue-400 transition translate-4">
                         info@ssbhealthcare.com
                     </Link>
+                </div>
+
+                <div className="hidden md:flex gap-6 items-center">
                     <Link
                         href="tel:+919540114114"
                         className="bg-blue-400 text-white text-lg font-medium py-2 px-6 rounded-full shadow-lg hover:shadow-xl transition-transform transform hover:scale-105"
