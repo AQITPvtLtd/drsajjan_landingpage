@@ -5,8 +5,8 @@ import Image from 'next/image';
 const Tagline = () => {
     return (
         <div className='bg-cyan-100 py-16'>
-            <div className="grid grid-cols-12">
-                <div className='col-start-2 col-span-4'>
+            <div className="lg:grid lg:grid-cols-12">
+                <div className='col-start-2 col-span-4 px-5 lg:px-0'>
                     <Image
                         width={1000}
                         height={1000}
