@@ -11,13 +11,13 @@ import Image from "next/image";
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 
 const NextArrow = ({ onClick }) => (
-    <div className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full cursor-pointer shadow-lg z-10 hover:bg-gray-700" onClick={onClick}>
+    <div className="absolute lg:block hidden top-1/2 lg:-right-14 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full cursor-pointer shadow-lg z-10 hover:bg-gray-700" onClick={onClick}>
         <GrNext size={24} />
     </div>
 );
 
 const PrevArrow = ({ onClick }) => (
-    <div className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full cursor-pointer shadow-lg z-10 hover:bg-gray-700" onClick={onClick}>
+    <div className="absolute lg:block hidden top-1/2 lg:-left-14 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full cursor-pointer shadow-lg z-10 hover:bg-gray-700" onClick={onClick}>
         <GrPrevious size={24} />
     </div>
 );
@@ -44,13 +44,13 @@ const Gallery = () => {
     };
 
     return (
-        <div className="px-10 py-8 bg-[#f7f7f7] overflow-x-hidden">
-            <h1 className="text-center font-semibold text-2xl pb-2">Gallery Images</h1>
+        <div className="lg:px-10 px-5 py-8 bg-[#f7f7f7] overflow-x-hidden mt-5">
+            <h1 className='text-center font-semibold  text-4xl' style={{ fontFamily: 'Roboto Slab, serif' }}>Gallery Images</h1>
 
-            <div className="pb-8 px-4 max-w-6xl mx-auto">
+            <div className="pb-8 px-4 max-w-6xl mx-auto mt-7">
                 <Slider {...settings}>
                     {galleryData.map((s) => (
-                        <div key={s.id} className="px-2">
+                        <div key={s.id} className="lg:px-2">
                             <div className="flex justify-center">
                                 <Image
                                     width={1000}
@@ -65,8 +65,6 @@ const Gallery = () => {
                 </Slider>
             </div>
         </div>
-
-
     );
 };
 

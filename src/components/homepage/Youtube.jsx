@@ -13,13 +13,13 @@ const videos = [
 ];
 
 const NextArrow = ({ onClick }) => (
-    <div className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full cursor-pointer shadow-lg z-10 hover:bg-gray-700" onClick={onClick}>
+    <div className="absolute lg:block hidden top-1/2 lg:-right-20 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full cursor-pointer shadow-lg z-10 hover:bg-gray-700" onClick={onClick}>
         <GrNext size={24} />
     </div>
 );
 
 const PrevArrow = ({ onClick }) => (
-    <div className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full cursor-pointer shadow-lg z-10 hover:bg-gray-700" onClick={onClick}>
+    <div className="absolute lg:block hidden top-1/2 lg:-left-20 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full cursor-pointer shadow-lg z-10 hover:bg-gray-700" onClick={onClick}>
         <GrPrevious size={24} />
     </div>
 );
@@ -46,9 +46,9 @@ const Youtube = () => {
     };
 
     return (
-        <div className=''>
-            <h2 className='text-center text-2xl font-semibold my-5'>Youtube Videos</h2>
-            <div className="pb-8 px-4 max-w-6xl mx-auto">
+        <div className='bg-[#f7f7f7]'>
+            <h2 className='text-center font-semibold text-4xl' style={{ fontFamily: 'Roboto Slab, serif' }}>Informative Videos</h2>
+            <div className="pb-8 px-4 max-w-6xl mx-auto mt-5">
                 <Slider {...settings}>
                     {videos.map((videoId, index) => (
                         <div key={index} className="px-2">

@@ -5,7 +5,12 @@ import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
 import Swal from 'sweetalert2';
 import { ClipLoader } from "react-spinners";
+import { Noto_Sans } from '@next/font/google';
 
+
+const notoSans = Noto_Sans({
+    subsets: ['latin'], // You can add more subsets if needed
+});
 const Form = () => {
     const router = useRouter();
     const [loading, setLoading] = useState(false);
@@ -55,11 +60,7 @@ const Form = () => {
         try {
             const response = await form(formDataToSend);
             if (response.success) {
-                Swal.fire({
-                    title: "Form Submitted Successfully!",
-                    text: "You Clicked the Button!",
-                    icon: "success",
-                })
+                router.push("/thankyou");
                 setformData({
                     name: "",
                     phone: "",
@@ -68,7 +69,7 @@ const Form = () => {
                     location: "",
                     medicalReport: null,
                 });
-                router.push("/");
+
             } else {
                 Swal.fire({
                     icon: "error",
@@ -96,7 +97,9 @@ const Form = () => {
                 >
                     <h3 className="text-xl font-semibold text-gray-700 mb-1">Submit Your Query</h3>
                     <div className="mb-4">
-                        <label className="block text-gray-600 mb-1" htmlFor="name">
+                        <label
+                            className={`block text-gray-600 mb-1 ${notoSans.className}`}
+                            htmlFor="name">
                             Full Name <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -111,7 +114,7 @@ const Form = () => {
                         />
                     </div>
                     <div className="mb-2">
-                        <label className="block text-gray-600 mb-1" htmlFor="phone">
+                        <label className={`block text-gray-600 mb-1 ${notoSans.className}`} htmlFor="phone">
                             Phone Number <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -126,7 +129,7 @@ const Form = () => {
                         />
                     </div>
                     <div className="mb-2">
-                        <label className="block text-gray-600 mb-1" htmlFor="email">  Email <span className="text-red-500">*</span>
+                        <label className={`block text-gray-600 mb-1 ${notoSans.className}`} htmlFor="email">  Email <span className="text-red-500">*</span>
                         </label>
                         <input
                             type="email"
@@ -140,7 +143,7 @@ const Form = () => {
                         />
                     </div>
                     <div className="mb-2">
-                        <label className="block text-gray-600 mb-1" htmlFor="location">
+                        <label className={`block text-gray-600 mb-1 ${notoSans.className}`} htmlFor="location">
                             Location <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -155,7 +158,7 @@ const Form = () => {
                         />
                     </div>
                     <div className="mb-2">
-                        <label className="block text-gray-600 mb-1" htmlFor="message">
+                        <label className={`block text-gray-600 mb-1 ${notoSans.className}`} htmlFor="message">
                             Write Problem English / Hindi <span className="text-red-500">*</span>
                         </label>
                         <textarea
@@ -171,7 +174,8 @@ const Form = () => {
                     <div className="pb-2" >
                         <label
                             htmlFor="medicalReport"
-                            className="block text-md font-medium mb-1 text-primary">
+                            className={`block text-md font-medium mb-1 text-primary ${notoSans.className}`}
+                        >
                             Upload Medical Report (Optional)
                         </label>
                         <input
@@ -191,7 +195,8 @@ const Form = () => {
                                 <ClipLoader width="60" height="60" color="#092644" className="animate-spin" />
                             </div>) : (<button
                                 type="submit"
-                                className="w-full bg-[#092644] text-white py-2 px-4 rounded cursor-pointer transition duration-200"
+
+                                className={`w-full bg-[#0271a7] text-white py-2 px-4 rounded cursor-pointer transition duration-200 ${notoSans.className}`}
                             >
                                 Submit
                             </button>)
