@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { FaArrowRight } from "react-icons/fa";
-import { Noto_Sans } from '@next/font/google';
+import { Noto_Sans } from 'next/font/google';
 
 const notoSans = Noto_Sans({
     subsets: ['latin'],

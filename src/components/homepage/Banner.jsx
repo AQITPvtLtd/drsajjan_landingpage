@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Form from './Form';
-import { Noto_Sans } from '@next/font/google';
+import { Noto_Sans } from 'next/font/google';
 import { HiOutlineEmojiHappy } from "react-icons/hi";
 import { FaRegCalendarCheck, FaBookOpen, FaTrophy } from "react-icons/fa";
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Noto_Sans } from '@next/font/google';
+import { Noto_Sans } from 'next/font/google';
 
 const notoSans = Noto_Sans({
     subsets: ['latin'],

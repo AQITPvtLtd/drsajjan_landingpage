@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import React, { useState } from 'react'
-import { Noto_Sans } from '@next/font/google';
+import { Noto_Sans } from 'next/font/google';
 
 
 const notoSans = Noto_Sans({

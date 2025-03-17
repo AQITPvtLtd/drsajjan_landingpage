@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FiMenu, FiX } from 'react-icons/fi';
-import { Noto_Sans } from '@next/font/google';
+import { Noto_Sans } from 'next/font/google';
 import { IoIosCall } from "react-icons/io";
 
 

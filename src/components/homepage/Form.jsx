@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
 import Swal from 'sweetalert2';
 import { ClipLoader } from "react-spinners";
-import { Noto_Sans } from '@next/font/google';
+import { Noto_Sans } from 'next/font/google';
 
 
 const notoSans = Noto_Sans({

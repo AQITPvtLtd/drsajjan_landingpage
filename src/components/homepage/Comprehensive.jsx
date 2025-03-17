@@ -1,5 +1,5 @@
 import React from 'react';
-import { Noto_Sans } from '@next/font/google';
+import { Noto_Sans } from 'next/font/google';
 import Link from 'next/link';
 import { FaArrowRight } from "react-icons/fa";
 
