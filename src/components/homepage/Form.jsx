@@ -191,7 +191,7 @@ const Form = () => {
 
                     <div>
                         {
-                            loading ? (<div className="flex justify-center items-center w-full h-full bg-gray-500 bg-opacity-50 rounded-md fixed top-0 left-0 z-50">
+                            loading ? (<div className="flex justify-center items-center w-full h-full bg-opacity-50 rounded-md fixed top-0 left-0 z-50">
                                 <ClipLoader width="60" height="60" color="#092644" className="animate-spin" />
                             </div>) : (<button
                                 type="submit"
